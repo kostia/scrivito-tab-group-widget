@@ -1,0 +1,15 @@
+<div class="scrivito-tab-group">
+  <div class="scrivito-tab-titles">
+    <% widget.tabs.each_with_index do |tab, i| %>
+      <div class="scrivito-tab-title <%= 'scrivito-tab-active' if i == 0 %>">
+        <%= scrivito_value tab.title %>
+      </div>
+    <% end %>
+  </div>
+  <div class="scrivito-tab-contents">
+    <% widget.tabs.each_with_index do |tab, i| %>
+      <%= scrivito_tag :div, tab, :content,
+        class: "scrivito-tab-content #{'scrivito-tab-active' if i == 0}" %>
+    <% end %>
+  </div>
+</div>
