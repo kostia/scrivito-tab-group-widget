@@ -8,3 +8,6 @@
 .scrivito-tab-group .scrivito-tab-contents .scrivito-tab-content { display: none; min-height: 200px!important; padding: 10px; width: 100%; }
 .scrivito-tab-group .scrivito-tab-contents .scrivito-tab-content.scrivito-tab-active { display: block; }
 .scrivito-tab-title-details { background: #ddd; padding: 10px; margin-bottom: 2px; }
+.scrivito-tab-title-details h4 { display: inline; }
+[data-scrivito-tab-toggle-details] { font-size: 12px; padding-left: 5px; }
+[class^=scrivito-tab-details-] { display: none; background: #eee; padding: 10px; margin-top: 5px; }

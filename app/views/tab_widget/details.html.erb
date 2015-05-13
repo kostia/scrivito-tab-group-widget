@@ -1,1 +1,11 @@
-<%= scrivito_tag :div, widget, :title, class: 'scrivito-tab-title-details' %>
+<div class="scrivito-tab-title-details">
+  <%= scrivito_tag :h4, widget, :title %>
+
+  <%= link_to '(details)', '#', 'data-scrivito-tab-toggle-details' => widget.id %>
+
+  <div class="scrivito-tab-details-<%= widget.id %>">
+    <div><b>Font Size</b>: <%= scrivito_tag :span, widget, :font_size %></div>
+    <div><b>Font Color</b>: <%= scrivito_tag :span, widget, :font_color %></div>
+    <div><b>Background Color</b>: <%= scrivito_tag :span, widget, :background_color %></div>
+  </div>
+</div>
