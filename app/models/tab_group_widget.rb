@@ -7,4 +7,8 @@ class TabGroupWidget < Widget
   def valid_widget_classes_for(field_name)
     [TabWidget]
   end
+
+  def self.description_for_editor
+    'Tab Group'
+  end
 end

@@ -5,4 +5,8 @@ class TabWidget < Widget
   def self.valid_container_classes
     [TabGroupWidget]
   end
+
+  def self.description_for_editor
+    'Tab'
+  end
 end
