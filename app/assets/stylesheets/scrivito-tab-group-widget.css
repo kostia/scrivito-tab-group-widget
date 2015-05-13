@@ -7,4 +7,4 @@
 .scrivito-tab-group .scrivito-tab-contents { clear: both; }
 .scrivito-tab-group .scrivito-tab-contents .scrivito-tab-content { display: none; min-height: 200px!important; padding: 10px; width: 100%; }
 .scrivito-tab-group .scrivito-tab-contents .scrivito-tab-content.scrivito-tab-active { display: block; }
-.scrivito-tab-title-details { background: #bbb; border: 1px solid #aaa; padding: 10px; }
+.scrivito-tab-title-details { background: #ddd; padding: 10px; margin-bottom: 2px; }
