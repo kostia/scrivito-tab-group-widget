@@ -1,5 +1,5 @@
 class TabWidget < Widget
-  attribute :title, :string
+  attribute :title, :string, default: 'New Tab'
   attribute :content, :widgetlist
 
   def self.valid_container_classes
