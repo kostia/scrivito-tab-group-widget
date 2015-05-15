@@ -22,6 +22,21 @@ scrivito.on('content', function(content) {
     tab_details.toggle();
     return false;
   });
+
+  if ($.minicolors) {
+    var attach_minicolors = function(field_name) {
+      $(content).find('[class^=scrivito-tab-details] [data-scrivito-field-name='+field_name+']')
+        .each(function() {
+          var field_tag = $(this);
+          field_tag.minicolors({
+            changeDelay: 500,
+            change: function(color) { field_tag.scrivito('save', color); }
+          });
+        });
+    }
+    attach_minicolors('font_color');
+    attach_minicolors('background_color');
+  }
 });
 
 }());

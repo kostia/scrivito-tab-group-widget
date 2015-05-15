@@ -4,8 +4,25 @@
   <%= link_to '(details)', '#', 'data-scrivito-tab-toggle-details' => widget.id %>
 
   <div class="scrivito-tab-details-<%= widget.id %>">
-    <div><b>Font Size</b>: <%= scrivito_tag :span, widget, :font_size %></div>
-    <div><b>Font Color</b>: <%= scrivito_tag :span, widget, :font_color %></div>
-    <div><b>Background Color</b>: <%= scrivito_tag :span, widget, :background_color %></div>
+    <div>
+      <b>Font Size</b>:
+      <%= scrivito_tag :span, widget, :font_size %>
+    </div>
+    <div>
+      <b>Font Color</b>:
+      <% if defined? JqueryMinicolorsRails %>
+        <%= scrivito_tag :input, widget, :font_color, 'data-editor' => 'minicolors' %>
+      <% else %>
+        <%= scrivito_tag :input, widget, :font_color %>
+      <% end %>
+    </div>
+    <div>
+      <b>Background Color</b>:
+      <% if defined? JqueryMinicolorsRails %>
+        <%= scrivito_tag :input, widget, :background_color, 'data-editor' => 'minicolors' %>
+      <% else %>
+        <%= scrivito_tag :input, widget, :background_color %>
+      <% end %>
+    </div>
   </div>
 </div>

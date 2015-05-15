@@ -31,9 +31,38 @@ Add to `app/assets/stylesheets/application.css` _after_ `scrivito`:
 
 Simply insert a tab group widget into a random attribute of type `widgetlist`.
 
+### Colorpicker
+
+This gem allows you to change the font and background color of each tab in-place. All you need is to
+type the hexcode or the color name in the corresponding input. It is also possible to enable a
+colorpicker:
+
+Add to `Gemfile`:
+```ruby
+gem 'jquery-minicolors-rails'
+```
+
+Add to `app/assets/javascripts/application.js`:
+```javascript
+//= require jquery.minicolors
+```
+
+Add to `app/assets/stylesheets/application.css`:
+```css
+/*
+ *= require jquery.minicolors
+ */
+```
+
+This gem will automatically detect that the colorpicker is available and will set it up for you:
+
+![scrivito-tab-group-widget-colorpicker](https://raw.github.com/kostia/scrivito-tab-group-widget/master/scrivito-tab-group-widget-colorpicker.png)
+
+See also https://github.com/kostia/jquery-minicolors-rails.
+
 ## Contributing
 
-1. Fork it ( https://github.com/kostia/scrivito-tab-group-widget/merge_tags/fork )
+1. Fork it (https://github.com/kostia/scrivito-tab-group-widget/merge_tags/fork)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
