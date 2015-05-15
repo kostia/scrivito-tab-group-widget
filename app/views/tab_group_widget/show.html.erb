@@ -2,7 +2,10 @@
   <div class="scrivito-tab-titles">
     <% widget.tabs.each_with_index do |tab, i| %>
       <div class="scrivito-tab-title <%= 'scrivito-tab-active' if i == 0 %>"
-          style="background: <%= tab.background_color %>; color: <%= tab.font_color %>;">
+       style="
+         background: <%= tab.background_color %>;
+         color: <%= tab.font_color %>;
+         font-size: <%= tab.font_size %>;">
         <%= scrivito_value tab.title %>
       </div>
     <% end %>

@@ -6,22 +6,24 @@
   <div class="scrivito-tab-details-<%= widget.id %>">
     <div>
       <b>Font Size</b>:
-      <%= scrivito_tag :span, widget, :font_size %>
+      <%= scrivito_edit_enum widget, :font_size %>
     </div>
     <div>
       <b>Font Color</b>:
       <% if defined? JqueryMinicolorsRails %>
-        <%= scrivito_tag :input, widget, :font_color, 'data-editor' => 'minicolors' %>
+        <%= scrivito_tag :input, widget, :font_color, value: widget.font_color,
+          'data-editor' => 'minicolors' %>
       <% else %>
-        <%= scrivito_tag :input, widget, :font_color %>
+        <%= scrivito_tag :input, widget, :font_color, value: widget.font_color %>
       <% end %>
     </div>
     <div>
       <b>Background Color</b>:
       <% if defined? JqueryMinicolorsRails %>
-        <%= scrivito_tag :input, widget, :background_color, 'data-editor' => 'minicolors' %>
+        <%= scrivito_tag :input, widget, :background_color, value: widget.background_color,
+          'data-editor' => 'minicolors' %>
       <% else %>
-        <%= scrivito_tag :input, widget, :background_color %>
+        <%= scrivito_tag :input, widget, :background_color, value: widget.background_color %>
       <% end %>
     </div>
   </div>
